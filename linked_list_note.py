@@ -18,7 +18,7 @@ class Node:
 node1=Node(1)
 # print(node1.next)
 
-#创建单链表类
+#创建单链表
 class singlelink:
     #3个属性，头节点、尾节点、链表长度
     def __init__(self):
