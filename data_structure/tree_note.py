@@ -35,9 +35,9 @@ class Tree():
         if not self.root:
             self.root=node
         else:
-            #各个节点完成一次存储FIFO对每个节点检查并添加子树（节点）
+            #遍历各个节点，检查左右指针域：空则添加子节点；非空当前子节点入队，进入下次循环
+            # 下次循环队列内节点检查并添加子树（节点）
             queue=[]
-            print(queue)
             queue.append(self.root)
             while True:
                 current_exist_node=queue.pop(0)
@@ -54,5 +54,9 @@ class Tree():
                     queue.append(current_exist_node.left)
                     queue.append(current_exist_node.right)
 tree=Tree()
-tree.add_node(1)
-tree.add_node(2)
+
+# 自定义的二叉树
+for i in range(10):
+    if i==3:
+        i=None
+    tree.add_node(i)
