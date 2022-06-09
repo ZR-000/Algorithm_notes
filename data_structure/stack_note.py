@@ -11,18 +11,25 @@ class Stack():
     
     def isempty(self):
         return self.list==[]
-    def push(self.d):
+    def push(self,d):
         self.list.append(d)
     def gettop(self):
         if self.isempty():
-            return 'Stack is empty'
+            raise StackUnderflow("in SStack.top()")
         else:
             return self.list[-1]
     def pop(self):
         if self.isempty():
-            return 'Stack is empty'
+            # return 'Stack is empty'
+            raise StackUnderflow("in SStack.top()")
         else:
             return self.list.pop()
     
+class StackUnderflow(ValueError):
+    pass
 
-
+ss=Stack()
+for i in range(5):
+    ss.push(i)
+for i in range(6):
+    ss.pop()
