@@ -22,6 +22,7 @@ class Stack():
         if self.isempty():
             # return 'Stack is empty'
             raise StackUnderflow("in SStack.top()")
+            # raise语句包含了一个字符串实参
         else:
             return self.list.pop()
     
